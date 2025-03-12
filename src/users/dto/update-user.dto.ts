@@ -28,10 +28,6 @@ export class UpdateUserDto{
 
     @IsOptional()
     @IsString()
-    program?:       string;
-
-    @IsOptional()
-    @IsString()
     userKey?:    string;
 
     @IsOptional()

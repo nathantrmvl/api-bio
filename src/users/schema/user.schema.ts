@@ -24,9 +24,6 @@ export class User {
   @Prop({ required: true })
   type_user: string;
 
-  @Prop({ required: true })
-  program: string;
-
   @Prop({ required: true, unique: true })
   userKey: string;
 

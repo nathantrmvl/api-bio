@@ -28,16 +28,16 @@ export class UsersController {
     return this.usersService.findOne(id);
   }
 
-  @Patch(':userKey')
-  update(@Param('userKey') userKey: string, @Body() updateUserDto: UpdateUserDto) {
+  @Patch(':id')
+  update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
     if (!updateUserDto) {
       throw new Error('Datos de usuario no proporcionados.');
     }
-    return this.usersService.update(userKey, updateUserDto);
+    return this.usersService.update(id, updateUserDto);
   }
 
-  @Delete(':userKey')
-  delete(@Param('userKey') userKey: string) {
-    return this.usersService.deleteByUserKey(userKey);
+  @Delete(':id')
+  delete(@Param('id') id: string) {
+    return this.usersService.deleteById(id);
   }
 }

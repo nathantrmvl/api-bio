@@ -28,10 +28,6 @@ export class CreateUserDto{
 
     @IsNotEmpty()
     @IsString()
-    program:        string;
-
-    @IsNotEmpty()
-    @IsString()
     userKey:    string;
 
     @IsNotEmpty()
